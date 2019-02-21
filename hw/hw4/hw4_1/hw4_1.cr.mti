@@ -1,0 +1,50 @@
+C:/Users/jasha/Documents/assigns-jsharp4/hw/hw4/hw4_1/barrelRow_4.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/hw/hw4/hw4_1/barrelRow_4.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module barrelRow_4
+
+Top level modules:
+	barrelRow_4
+
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/hw/hw4/hw4_1/barrelRow_8.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/hw/hw4/hw4_1/barrelRow_8.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module barrelRow_8
+
+Top level modules:
+	barrelRow_8
+
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/hw/hw4/hw4_1/clkrst.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/hw/hw4/hw4_1/clkrst.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/hw/hw4/hw4_1/barrelShifter_hier_bench.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/hw/hw4/hw4_1/barrelShifter_hier_bench.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module barrelShifter_hier_bench
+
+Top level modules:
+	barrelShifter_hier_bench
+
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/hw/hw4/hw4_1/barrelShifter_hier.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/hw/hw4/hw4_1/barrelShifter_hier.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module barrelShifter_hier
+
+Top level modules:
+	barrelShifter_hier
+
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/hw/hw4/hw4_1/mux2_1.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/hw/hw4/hw4_1/mux2_1.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mux2_1
+
+Top level modules:
+	mux2_1
+
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/hw/hw4/hw4_1/barrelRow_2.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/hw/hw4/hw4_1/barrelRow_2.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module barrelRow_2
+
+Top level modules:
+	barrelRow_2
+
+} {} {}}
