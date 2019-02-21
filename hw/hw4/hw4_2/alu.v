@@ -37,7 +37,7 @@ module alu (A, B, Cin, Op, invA, invB, sign, Out, Zero, Ofl);
     barrelShifter shifter(.In(A_flip), .Cnt(B_flip[3:0]), .Op(Op[1:0]), .Out(shift_out));
     rca_16b adder(.A(A_flip), .B(B_flip), .C_in(Cin), .S(adder_out), .C_out(Cout));
 
-    assign Ofl = sign ? ( ~(A_flip[N - 1] ^ B_flip[N - 1]) & (adder_out[N-1] ^ A_flip[N - 1]) ) : Cout;
+    assign Ofl = (Op[1] | Op[0]) ? 0 : sign ? ( ~(A_flip[N - 1] ^ B_flip[N - 1]) & (adder_out[N-1] ^ A_flip[N - 1]) ) : Cout;
     assign Zero = ~|adder_out;
 
     always @(*) begin
