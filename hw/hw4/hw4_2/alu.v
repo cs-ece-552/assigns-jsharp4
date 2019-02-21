@@ -23,10 +23,33 @@ module alu (A, B, Cin, Op, invA, invB, sign, Out, Zero, Ofl);
    input         invA;
    input         invB;
    input         sign;
-   output [N-1:0] Out;
+   output reg [N-1:0] Out;
    output         Ofl;
    output         Zero;
 
    /* YOUR CODE HERE */
+    wire [N-1:0] A_flip, B_flip, shift_out, adder_out, xor_out, and_out, or_out;
+    wire Cout;
+    
+    assign A_flip = invA ? ~A : A;
+    assign B_flip = invB ? ~B : B;
+
+    barrelShifter shifter(.In(A_flip), .Cnt(B_flip[3:0]), .Op(Op[1:0]), .Out(shift_out));
+    rca_16b adder(.A(A_flip), .B(B_flip), .C_in(Cin), .S(adder_out), .C_out(Cout));
+
+    assign Ofl = sign ? ( ~(A_flip[N - 1] ^ B_flip[N - 1]) & (adder_out[N-1] ^ A_flip[N - 1]) ) : Cout;
+    assign Zero = ~|adder_out;
+
+    always @(*) begin
+    casex (Op)
+        3'b0xx  : Out = shift_out;
+        3'b100  : Out = adder_out;
+        3'b101  : Out = A_flip & B_flip;
+        3'b110  : Out = A_flip | B_flip;
+        3'b111  : Out = A_flip ^ B_flip;
+        default : $error("DEFAULT CASE ALU OUTPUT");
+    endcase
+    end
+
     
 endmodule
