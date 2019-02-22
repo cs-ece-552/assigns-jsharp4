@@ -22,9 +22,9 @@ module barrelShifter (In, Cnt, Op, Out);
    /* YOUR CODE HERE */
    wire [N-1:0] out_bus [C-2:0];
    
-   barrelRow_1 row_1(.In(In), .Shift(Cnt[0]), .Op(Op), .Out(out_bus[0]));
-   barrelRow_2 row_2(.In(out_bus[0]), .Shift(Cnt[1]), .Op(Op), .Out(out_bus[1]));
-   barrelRow_4 row_4(.In(out_bus[1]), .Shift(Cnt[2]), .Op(Op), .Out(out_bus[2]));
-   barrelRow_8 row_8(.In(out_bus[2]), .Shift(Cnt[3]), .Op(Op), .Out(Out));         
+   barrelRow #(N, O, 1) row_1(.In(In), .Shift(Cnt[0]), .Op(Op), .Out(out_bus[0]));
+   barrelRow #(N, O, 2) row_2(.In(out_bus[0]), .Shift(Cnt[1]), .Op(Op), .Out(out_bus[1]));
+   barrelRow #(N, O, 4) row_4(.In(out_bus[1]), .Shift(Cnt[2]), .Op(Op), .Out(out_bus[2]));
+   barrelRow #(N, O, 8) row_8(.In(out_bus[2]), .Shift(Cnt[3]), .Op(Op), .Out(Out));         
    
 endmodule
