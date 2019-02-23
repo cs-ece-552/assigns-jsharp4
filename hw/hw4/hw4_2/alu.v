@@ -23,12 +23,12 @@ module alu (A, B, Cin, Op, invA, invB, sign, Out, Zero, Ofl);
    input         invA;
    input         invB;
    input         sign;
-   output reg [N-1:0] Out;
+   output [N-1:0] Out;
    output         Ofl;
    output         Zero;
 
    /* YOUR CODE HERE */
-    wire [N-1:0] A_flip, B_flip, shift_out, adder_out, xor_out, and_out, or_out;
+    wire [N-1:0] A_flip, B_flip, shift_out, adder_out, logic_out;
     wire Cout;
     
     assign A_flip = invA ? ~A : A;
@@ -40,16 +40,25 @@ module alu (A, B, Cin, Op, invA, invB, sign, Out, Zero, Ofl);
     assign Ofl = (Op[1] | Op[0]) ? 0 : sign ? ( ~(A_flip[N - 1] ^ B_flip[N - 1]) & (adder_out[N-1] ^ A_flip[N - 1]) ) : Cout;
     assign Zero = ~|adder_out;
 
-    always @(*) begin
-    casex (Op)
-        3'b0xx  : Out = shift_out;
-        3'b100  : Out = adder_out;
-        3'b101  : Out = A_flip & B_flip;
-        3'b110  : Out = A_flip | B_flip;
-        3'b111  : Out = A_flip ^ B_flip;
-        default : $error("DEFAULT CASE ALU OUTPUT");
-    endcase
-    end
+    // always @(*) begin
+    // casex (Op)
+    //     3'b0xx  : Out = shift_out;
+    //     3'b100  : Out = adder_out;
+    //     3'b101  : Out = A_flip & B_flip;
+    //     3'b110  : Out = A_flip | B_flip;
+    //     3'b111  : Out = A_flip ^ B_flip;
+    //     default : $error("DEFAULT CASE ALU OUTPUT");
+    // endcase
+    // end
+
+    mux4_1_16b logic_mux(.InA(adder_out), 
+                        .InB(A_flip & B_flip), 
+                        .InC(A_flip | B_flip), 
+                        .InD(A_flip ^ B_flip), 
+                        .S(Op[1:0]), 
+                        .Out(logic_out));
+    
+    mux2_1_16b shift_mux(.InA(shift_out), .InB(logic_out), .S(Op[2]), .Out(Out));
 
     
 endmodule
