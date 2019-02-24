@@ -1,0 +1,2 @@
+for i in range(16):
+    print("mux3_8.In0(In0[" + str(i) + "]), .In1(In1[" + str(i) + "]), .In2(In2[" + str(i) + "]), .In3(In3[" + str(i) +"]), .In4(In4[" + str(i) +"]), .In5(In5["+ str(i) + "]), .In6(In6[" + str(i) + "]), .In7(In7[" + str(i) + "]), .S(S), .Out(Out[" + str(i) + "]));")

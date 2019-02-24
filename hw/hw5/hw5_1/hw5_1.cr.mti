@@ -1,0 +1,85 @@
+C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/mux3_8.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/mux3_8.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mux3_8
+
+Top level modules:
+	mux3_8
+
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/mux3_8_16b.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/mux3_8_16b.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mux3_8_16b
+
+Top level modules:
+	mux3_8_16b
+
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/reg_16b.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/reg_16b.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module reg_16b
+
+Top level modules:
+	reg_16b
+
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/rf_hier.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/rf_hier.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module rf_hier
+
+Top level modules:
+	rf_hier
+
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/decoder_3_8.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/decoder_3_8.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module decoder_3_8
+
+Top level modules:
+	decoder_3_8
+
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/rf.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/rf.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module rf
+
+Top level modules:
+	rf
+
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/clkrst.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/clkrst.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/nand2.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/nand2.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module nand2
+
+Top level modules:
+	nand2
+
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/mux2_1.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/mux2_1.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mux2_1
+
+Top level modules:
+	mux2_1
+
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/rf_bench.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/rf_bench.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module rf_bench
+
+Top level modules:
+	rf_bench
+
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/dff.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/dff.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module dff
+
+Top level modules:
+	dff
+
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/not1.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/hw/hw5/hw5_1/not1.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module not1
+
+Top level modules:
+	not1
+
+} {} {}}
