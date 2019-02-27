@@ -7,7 +7,6 @@ module decoder_3_8(in, out, en);
     reg [7:0] out_if_en;
 
     always @(*) begin
-        out = 8'h00;
         case (in)
             3'b000  : out_if_en = 8'h01;
             3'b001  : out_if_en = 8'h02;
