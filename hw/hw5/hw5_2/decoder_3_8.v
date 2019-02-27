@@ -21,7 +21,7 @@ module decoder_3_8(in, out, en);
         endcase
     end
 
-    out = (en) ? out_if_en : 8'h00;
+    assign out = en ? out_if_en : 8'h00;
 
 endmodule
 
