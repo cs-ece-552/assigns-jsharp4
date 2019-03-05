@@ -3,7 +3,7 @@ lbi r2, 0
 lbi r3, 0
 jal 0
 addi r0, r7, 0
-jalr r0, 8
+jalr r0, 10 
 lbi r1, 1 //shouldnt execute
 lbi r2, 2 //shouldnt execute
 lbi r3, 3 //shouldnt execute
