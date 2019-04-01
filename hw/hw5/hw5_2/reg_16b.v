@@ -10,7 +10,7 @@ module reg_16b(q, d, clk, rst, w_en, err);
 
     assign in = w_en ? d : q;
 
-    assign err = (d === 16'bx | w_en === 1'bx) ? 1 : 0;
+    assign err = (|d === 1'bx | w_en === 1'bx) ? 1 : 0;
 
     dff dff_0(.q(q[0]), .d(in[0]), .clk(clk), .rst(rst));
     dff dff_1(.q(q[1]), .d(in[1]), .clk(clk), .rst(rst));
