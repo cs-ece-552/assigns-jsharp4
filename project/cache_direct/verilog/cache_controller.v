@@ -19,8 +19,8 @@ module cache_controller(//inputs
                         done, 
                         err);
     
-    input clk, hit, dirty, valid, cache_err, stall, busy, mem_err, en, global_rd, global_wr;
-
+    input clk, hit, dirty, valid, cache_err, stall, mem_err, en, global_rd, global_wr;
+    input[3:0] busy;
     output comp, cache_write, global_hit;
 
     output reg mem_wr, mem_rd, done, err, global_hit;
