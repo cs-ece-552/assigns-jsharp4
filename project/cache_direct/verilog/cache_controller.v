@@ -101,9 +101,6 @@ module cache_controller(//inputs
             default:
                 next_state <= 4'h0;
         endcase
-
-        state <= next_state;
-
     end
 
     assign cache_write = global_wr & writers_block;
