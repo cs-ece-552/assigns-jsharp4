@@ -49,9 +49,11 @@ module mem_system(/*AUTOARG*/
                           .data_in              (cache_data_in),
                           .comp                 (comp),
                           .write                (cache_wr),
-                          .valid_in             (1));
+                          .valid_in             (1'b1);
 
-   wire mem_stall, mem_busy, mem_err, mem_wr, mem_rd, mem_data_out, mem_addr;
+   wire mem_stall, mem_err, mem_wr, mem_rd;
+   wire[15:0] mem_data_out, mem_addr;
+   wire[3:0] mem_busy;
 
    four_bank_mem mem(// Outputs
                      .data_out          (mem_data_out),
