@@ -24,7 +24,7 @@ module cache_controller(//inputs
     input[3:0] busy;
     output comp, cache_write, global_hit, stall;
 
-    output reg mem_wr, mem_rd, done, err, global_hit stall;
+    output reg mem_wr, mem_rd, done, err, global_hit, stall;
     reg access, writers_block, en_block;
 
     //not doing system verilog, so can't make enum, but assume states:
