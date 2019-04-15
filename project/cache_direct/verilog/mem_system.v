@@ -72,7 +72,7 @@ module mem_system(/*AUTOARG*/
    
    // your code here
    assign Stall = mem_stall;
-   assign DataOut = cache_data_out;
+   assign DataOut = (comp) cache_data_out ? mem_data_out;
 
    //addr, data select logic
    assign cache_data_in = (Wr) ? DataIn : mem_data_out;
