@@ -20,11 +20,11 @@ module cache_controller(//inputs
                         done, 
                         err);
     
-    input clk, hit, dirty, valid, cache_err, stall, mem_err, en, global_rd, global_wr, rst;
+    input clk, hit, dirty, valid, cache_err, mem_err, en, global_rd, global_wr, rst;
     input[3:0] busy;
-    output comp, cache_write, global_hit;
+    output comp, cache_write, global_hit, stall;
 
-    output reg mem_wr, mem_rd, done, err, global_hit;
+    output reg mem_wr, mem_rd, done, err, global_hit stall;
     reg access, writers_block, en_block;
 
     //not doing system verilog, so can't make enum, but assume states:
@@ -49,6 +49,7 @@ module cache_controller(//inputs
         en_block = 1;
         global_hit = 0;
         err = 0;
+        stall = 0;
 
         case(state)
             4'h0: begin //IDLE
@@ -59,32 +60,40 @@ module cache_controller(//inputs
             end
             4'h1: begin //AR
                 access = 1;
+                stall = 1;
                 next_state <= (dirty) ? ((valid) ? 4'h2 : 4'ha) : ((global_wr) ? 4'h8 : 4'h6);
+                stall = 1;
             end
             4'h2: begin//MW_1
                 mem_wr = 1;
+                stall = 1;
                 next_state <= 4'h3;
-            end
+                            end
             4'h3: begin //MW_2
                 en_block = 0;
+                stall = 1;
                 next_state <= 4'h4;
             end
             4'h4: begin //MW_3
                 en_block = 0;
+                stall = 1;
                 next_state <= 4'h5;
             end
             4'h5: begin //MW_4
                 en_block = 0;
+                stall = 1;
                 next_state <= (global_wr) ? 4'h8 : 4'h6;
             end
             4'h6: begin //MR_1:
                 mem_rd = 1;
                 en_block = 0;
+                stall = 1;
                 next_state <= 4'h7;
             end
             4'h7: begin //MR_2:
                 en_block = 0;
                 next_state <= 4'h8;
+                stall = 1;
             end
             4'h8: begin//DONE_AW
                 writers_block = 1;
