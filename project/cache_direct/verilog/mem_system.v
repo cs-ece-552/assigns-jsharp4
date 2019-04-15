@@ -71,6 +71,7 @@ module mem_system(/*AUTOARG*/
 
    
    // your code here
+   assign Stall = mem_stall;
 
    //addr, data select logic
    assign cache_data_in = (Wr) ? DataIn : mem_data_out;
