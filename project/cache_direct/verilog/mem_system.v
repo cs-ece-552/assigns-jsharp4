@@ -78,6 +78,7 @@ module mem_system(/*AUTOARG*/
 
    cache_controller controller(//inputs
                         .clk           (clk),
+                        .rst           (rst),
                         .hit           (cache_hit),
                         .dirty         (dirty),
                         .valid         (valid),

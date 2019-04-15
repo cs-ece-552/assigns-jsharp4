@@ -1,5 +1,6 @@
 module cache_controller(//inputs
                         clk,
+                        rst,
                         hit,
                         dirty,
                         valid,
@@ -19,7 +20,7 @@ module cache_controller(//inputs
                         done, 
                         err);
     
-    input clk, hit, dirty, valid, cache_err, stall, mem_err, en, global_rd, global_wr;
+    input clk, hit, dirty, valid, cache_err, stall, mem_err, en, global_rd, global_wr, rst;
     input[3:0] busy;
     output comp, cache_write, global_hit;
 
@@ -33,7 +34,13 @@ module cache_controller(//inputs
 
     assign en = global_wr | global_rd;
 
-    always @(posedge clk, posedge en) begin
+    always @(posedge clk, posedge rst, posedge en)
+        if (rst)
+            state <= 4'b0;
+        else
+            state <= next_state;
+
+    always @(*) begin
         access = 0;
         mem_wr = 0;
         mem_rd = 0;
