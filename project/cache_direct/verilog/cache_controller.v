@@ -34,7 +34,7 @@ module cache_controller(//inputs
 
     assign en = global_wr | global_rd;
 
-    always @(posedge clk, posedge rst, posedge en)
+    always @(posedge clk, posedge rst)
         if (rst)
             state <= 4'b0;
         else
@@ -68,7 +68,7 @@ module cache_controller(//inputs
                 mem_wr = 1;
                 stall = 1;
                 next_state <= 4'h3;
-                            end
+            end
             4'h3: begin //MW_2
                 en_block = 0;
                 stall = 1;
