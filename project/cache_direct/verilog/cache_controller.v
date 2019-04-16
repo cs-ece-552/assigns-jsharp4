@@ -125,6 +125,7 @@ module cache_controller(//inputs
                 writers_block = 1;
                 stall = 1;
                 next_state <= 4'ha;
+            end
             default:
                 next_state <= 4'h0;
           
