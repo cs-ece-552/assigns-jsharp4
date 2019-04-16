@@ -91,11 +91,11 @@ module cache_controller(//inputs
             4'h8: begin//MW3
                 stall = 1;
                 next_state = (global_wr) ? 4'hb : 4'h9;
-                mem_rd = (next_state == 4'h9);
             end
             4'h9: begin//MR2
                 stall = 1;
                 next_state = 4'h3;
+                mem_rd = 1;
             end
             4'ha: begin//CW DONE MISS
                 done = 1;
