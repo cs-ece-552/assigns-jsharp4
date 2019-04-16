@@ -20,16 +20,14 @@ module cache_controller(//inputs
                         done, 
                         err);
     
-    input clk, hit, dirty, valid, cache_err, mem_err, en, global_rd, global_wr, rst;
+    input clk, hit, dirty, valid, cache_err, mem_err, global_rd, global_wr, rst;
     input[3:0] busy;
     output comp, cache_write, global_hit, stall, err;
 
-    output reg mem_wr, mem_rd, done, cache_write, global_hit, stall;
-    reg access, writers_block, en_block;
+    output reg mem_wr, mem_rd, done, cache_write, global_hit, stall, en;
+    reg access, writers_block;
 
     reg[3:0] state, next_state;
-
-    assign en = global_wr | global_rd;
 
     always @(posedge clk, posedge rst)
         if (rst)
@@ -45,6 +43,7 @@ module cache_controller(//inputs
         global_hit = 0;
         stall = 0;
         cache_write = 0;
+        en = 1;
 
         case(state)
             4'h0: begin //IDLE
@@ -65,6 +64,7 @@ module cache_controller(//inputs
             4'h3: begin //MR
                 stall = 1;
                 next_state = 4'h4;
+                en = 0;
             end
             4'h4: begin //AW
                 stall = 1;
@@ -83,6 +83,7 @@ module cache_controller(//inputs
             4'h7: begin//MW2
                 stall = 1;
                 next_state = 4'h8;
+                en = 0;
             end
             4'h8: begin//MW3
                 stall = 1;

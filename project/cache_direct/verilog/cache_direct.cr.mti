@@ -1,9 +1,23 @@
-C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/mem_system_ref.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/mem_system_ref.v
+C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/mem_system_perfbench.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/mem_system_perfbench.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mem_system_perfbench
+
+Top level modules:
+	mem_system_perfbench
+
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/mem_system_ref.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/mem_system_ref.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module mem_system_ref
 
 Top level modules:
 	mem_system_ref
+
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/mem_system.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/mem_system.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mem_system
+
+Top level modules:
+	mem_system
 
 } {} {}} C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/clkrst.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/clkrst.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
