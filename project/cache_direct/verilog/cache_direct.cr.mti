@@ -1,11 +1,4 @@
-C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/mem_system_perfbench.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/mem_system_perfbench.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module mem_system_perfbench
-
-Top level modules:
-	mem_system_perfbench
-
-} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/mem_system_ref.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/mem_system_ref.v
+C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/mem_system_ref.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/mem_system_ref.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module mem_system_ref
 
@@ -75,14 +68,14 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	mem_system_hier
 
-} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/memv.syn.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/memv.syn.v
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/memv.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/memv.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module memv
 
 Top level modules:
 	memv
 
-} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/memv.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/memv.v
+} {} {}} C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/memv.syn.v {1 {vlog -work work -stats=none C:/Users/jasha/Documents/assigns-jsharp4/project/cache_direct/verilog/memv.syn.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module memv
 
