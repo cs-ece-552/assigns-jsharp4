@@ -163,8 +163,8 @@ module mem_system_perfbench(/*AUTOARG*/);
 		          $display("LOG: ReQNum %4d Cycle %8d ReqCycle %8d Wr Addr 0x%04x Value 0x%04x\n",
 			               n_replies, DUT.clkgen.cycle_count, req_cycle, Addr, DataIn);
                end
-	           //$display("ERROR! Request dropped");
-              //test_success = 1'b0;               
+	           $display("ERROR! Request dropped");
+              test_success = 1'b0;               
 	           n_replies = n_requests;	       
 	        end            
             rval = $fscanf(fd, "%d %d %d %d", 
