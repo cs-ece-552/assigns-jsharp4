@@ -57,7 +57,7 @@ module cache_controller(//inputs
             4'h2: begin //MISS
                 stall = 1;
                 access = 1;
-                next_state = (dirty & valid) ? 4'h6 : (global_rd) ? 4'h3 : (valid) ? 4'hb : 4'ha;
+                next_state = (dirty & valid) ? 4'h6 : (global_rd) ? 4'h3 : (valid) ? 4'hb : 4'h4;
                 mem_rd = (next_state == 4'h3) ? 1 : 0;
                 mem_wr = (next_state == 4'h6) ? 1 : 0;
             end
