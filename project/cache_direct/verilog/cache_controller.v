@@ -104,11 +104,13 @@ module cache_controller(//inputs
             4'h9: begin //DONE MISS
                 done = 1;
                 next_state <=4'h0;
+                stall = 1;
             end
             4'ha: begin //DONE_HIT
                 done = 1;
                 global_hit = 1;
                 next_state <= 4'h0;
+                stall = 1;
             end
             4'hb: begin//INVALID WRITE HIT
                 done = 1;
