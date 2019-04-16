@@ -121,7 +121,7 @@ module cache_controller(//inputs
         endcase
     end
 
-    assign cache_write = global_wr & writers_block;
+    assign cache_write = writers_block;
     assign comp = !access;
 
 endmodule
