@@ -56,7 +56,7 @@ module cache_controller(//inputs
                 global_hit = hit & valid;
                 next_state <= (en) ? ((hit) ? ((valid) ? 4'ha : ((global_wr) ? 4'h1 : 4'h1)) : 4'h1) : 4'h0;
                 access = (en & hit & global_wr & !valid);
-                writers_block = 1;
+                writers_block = global_wr;
             end
             4'h1: begin //AR
                 access = 1;
