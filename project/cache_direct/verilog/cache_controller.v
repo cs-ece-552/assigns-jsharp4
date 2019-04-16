@@ -52,6 +52,7 @@ module cache_controller(//inputs
             end
             4'h1: begin //DONE HIT
                 global_hit = 1;
+                stall = 1;
                 done = 1;
             end
             4'h2: begin //MISS
@@ -75,6 +76,7 @@ module cache_controller(//inputs
             4'h5: begin //CR MISS DONE
                 done = 1;
                 next_state = 4'h0;
+                stall = 1;
             end
             4'h6: begin//MW1
                 stall = 1;
@@ -97,6 +99,7 @@ module cache_controller(//inputs
             4'ha: begin//CW DONE MISS
                 done = 1;
                 next_state = 4'h0;
+                stall = 1;
             end
             4'hb: begin//CW
                 stall = 1;
