@@ -124,11 +124,12 @@ module cache_controller(//inputs
                 stall = 1;
                 next_state <= 4'ha;
             end
-            4'he: being//AW HIT
+            4'he: begin//AW HIT
                 writers_block = 1;
                 access = 1;
                 stall = 1;
                 next_state <= 4'hd;
+            end
             default:
                 next_state <= 4'h0;
           
