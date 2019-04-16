@@ -54,7 +54,7 @@ module cache_controller(//inputs
         case(state)
             4'h0: begin //IDLE
                 //global_hit = hit & valid;
-                next_state <= (en) ? (hit) ? (global_wr) ? 4'hd : (valid) ? 4'ha : 4'h6 : 4'h1 : 4'h0;
+                next_state <= (en) ? (hit) ? (valid) ? (global_wr) ? 4'hd : 4'ha : (global_wr) ? 4'hc : 4'h6 : 4'h1 : 4'h0;
                 access = (en & hit & global_wr);
                 writers_block = global_wr;
             end
