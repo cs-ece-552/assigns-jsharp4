@@ -98,6 +98,7 @@ module cache_controller(//inputs
             4'h8: begin//AW
                 writers_block = 1;
                 access = 1;
+                stall = 1;
                 next_state <= 4'h9;
             end
             4'h9: begin //DONE MISS
