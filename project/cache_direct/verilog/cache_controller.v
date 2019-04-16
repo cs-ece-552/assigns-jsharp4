@@ -70,7 +70,7 @@ module cache_controller(//inputs
                 stall = 1;
                 access = 1;
                 cache_write = 1;
-                next_state = (global_wr) ? 4'ha : 4'h5;
+                next_state = (global_wr) ? 4'hb : 4'h5;
             end
             4'h5: begin //CR MISS DONE
                 done = 1;
