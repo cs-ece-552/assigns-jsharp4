@@ -1,5 +1,5 @@
 Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
-Start time: 17:29:34 on Apr 16,2019
+Start time: 18:03:37 on Apr 16,2019
 vlog "+define+RANDSEED=3" -work __work cache_controller.v cache.v clkrst.v dff.v final_memory.v four_bank_mem.v memc.v mem_system_hier.v mem_system_perfbench.v mem_system_randbench.v mem_system_ref.v mem_system.v memv.v xcache_controller.v 
 -- Compiling module cache_controller
 -- Compiling module cache
@@ -20,14 +20,14 @@ Top level modules:
 	mem_system_perfbench
 	mem_system_randbench
 	xcache_controller
-End time: 17:29:34 on Apr 16,2019, Elapsed time: 0:00:00
+End time: 18:03:38 on Apr 16,2019, Elapsed time: 0:00:01
 Errors: 0, Warnings: 0
 Reading pref.tcl
 
 # 10.7c
 
 # vsim -c mem_system_randbench -lib __work 
-# Start time: 17:29:35 on Apr 16,2019
+# Start time: 18:03:38 on Apr 16,2019
 # //  ModelSim DE 10.7c Aug 17 2018Linux 4.15.0-47-generic
 # //
 # //  Copyright 1991-2018 Mentor Graphics Corporation
@@ -4293,7 +4293,7 @@ VSIM 1> run -all
 # 
 # LOG: Done small_random, Requests:       2001, Cycles:      10523 Hits:        609
 # LOG: ReqNum 2002 Cycle    10528 ReqCycle    10525 Wr Addr 0x0008 Value 0xe3e5 ValueRef 0xe3e5 Hit: 0
-
+# 
 # LOG: ReqNum 2003 Cycle    10534 ReqCycle    10531 Wr Addr 0x0010 Value 0x77c4 ValueRef 0x77c4 Hit: 0
 # 
 # LOG: ReqNum 2004 Cycle    10545 ReqCycle    10538 Wr Addr 0x0018 Value 0xaf21 ValueRef 0xaf21 Hit: 0
@@ -17527,5 +17527,5 @@ VSIM 1> run -all
 # Test status: FAIL
 # ** Note: $finish    : mem_system_randbench.v(330)
 #    Time: 4314787 ns  Iteration: 0  Instance: /mem_system_randbench
-# End time: 17:29:36 on Apr 16,2019, Elapsed time: 0:00:01
+# End time: 18:03:40 on Apr 16,2019, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
