@@ -54,6 +54,7 @@ module cache_controller(//inputs
                 global_hit = 1;
                 stall = 1;
                 done = 1;
+                next_state = 4'b0;
             end
             4'h2: begin //MISS
                 stall = 1;
