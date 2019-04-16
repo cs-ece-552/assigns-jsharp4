@@ -61,7 +61,7 @@ module cache_controller(//inputs
             4'h1: begin //AR
                 access = 1;
                 stall = 1;
-                next_state <= (dirty) ? ((valid) ? 4'h2 : 4'hb) : ((global_wr) ? 4'hc : 4'h6);
+                next_state <= (dirty) ? ((valid) ? 4'h2 : 4'hb) : ((global_wr) ? 4'h8 : 4'h6);
                 stall = 1;
             end
             4'h2: begin//MW_1
@@ -99,7 +99,7 @@ module cache_controller(//inputs
                 writers_block = 1;
                 access = 1;
                 stall = 1;
-                next_state <= 4'h9;
+                next_state <= (global_wr) ? 4'hc : 4'h9;
             end
             4'h9: begin //DONE MISS
                 done = 1;
@@ -116,11 +116,11 @@ module cache_controller(//inputs
                 done = 1;
                 next_state <= 4'h0;
             end    
-            4'hc: begin//AW
+            4'hc: begin//CW
                 writers_block = 1;
                 stall = 1;
                 next_state <= 4'h9;
-            end  
+            end
             default:
                 next_state <= 4'h0;
           
