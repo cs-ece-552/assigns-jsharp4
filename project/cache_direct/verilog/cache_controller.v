@@ -90,7 +90,7 @@ module cache_controller(//inputs
             end
             4'h8: begin//MW3
                 stall = 1;
-                next_state = (global_wr) ? 4'hb : 4'h9;
+                next_state = (global_wr) ? 4'h4 : 4'h9;
             end
             4'h9: begin//MR2
                 stall = 1;
