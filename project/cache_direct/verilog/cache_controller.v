@@ -48,7 +48,7 @@ module cache_controller(//inputs
         case(state)
             4'h0: begin //IDLE
                 cache_write = (hit & valid & global_wr);
-                next_state = (gloabl_rd | global_wr) ? (hit & valid) ? 4'h1 : 4'h2 : 4'h0;
+                next_state = (global_rd | global_wr) ? (hit & valid) ? 4'h1 : 4'h2 : 4'h0;
             end
             4'h1: begin //DONE HIT
                 global_hit = 1;
